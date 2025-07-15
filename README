@@ -1,10 +1,17 @@
-This exercise is about thread, mutex, condition variable
+# This exercise uses threads, mutexes, and condition variables
 
-Viết một chương trình thực hiện tạo 3 threads.
-Thread 1: Thực hiện việc nhập dữ liệu sinh viên từ bàn phím, bao gồm thông tin: Họ tên, ngày sinh, quê quán.
-Thread2: Mỗi lần nhập xong dữ liệu một sinh viên, thread này sẽ ghi thông tin sinh viên đó vào file (mỗi thông tin sinh viên nằm trên 1 dòng) thongtinsinhvien.txt.
-Thread3: Đọc dữ liệu vừa ghi được và in ra màn hình sau đó thông báo cho thread 1 tiếp tục nhập thêm sinh viên.
+## ✏️ Request:
+Write a program that creates 3 threads with the following functions:
 
-Bonus: total variable used for cal sum of students
-We can run again when 'thongtinsinhvien.txt' is written before
-program will read file and cal total of student before create threads.
+- **Thread 1**: Enters student information from the keyboard, including name, date of birth, and hometown.  
+- **Thread 2**: Each time data is entered, this thread writes the information to the `thongtinsinhvien.txt` file (each student's information is written on one line).  
+- **Thread 3**: Reads the data from the `thongtinsinhvien.txt` file and prints it to the terminal. After that, it signals Thread 1 to continue inputting.
+
+## 📌 Additional Requirements:
+- A global variable `total` is used to calculate the total number of students.
+- The program can be rerun: if `thongtinsinhvien.txt` already exists before the program starts, it will read the file and compute the current total number of students before creating the threads.
+
+## 👉 How to run?
+  - 'make all'
+  - './main'
+  - using 'gdb ./main' to debug
